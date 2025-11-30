@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router";
+import Logo from "../../../components/Logo/Logo";
 
 const Navbar = () => {
   const links = (
@@ -7,13 +8,17 @@ const Navbar = () => {
       <li>
         <NavLink to="/service">Service</NavLink>
       </li>
-
+      <li>
+        <NavLink to="/coverage">Coverage</NavLink>
+      </li>
       <li>
         <NavLink to="/about">About Us</NavLink>
       </li>
-
       <li>
-        <NavLink to="/coverage">Coverage</NavLink>
+        <NavLink to="/pricing">Pricing</NavLink>
+      </li>
+      <li>
+        <NavLink to="/rider">Be a Rider</NavLink>
       </li>
     </>
   );
@@ -45,7 +50,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl"> <Logo></Logo> </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
