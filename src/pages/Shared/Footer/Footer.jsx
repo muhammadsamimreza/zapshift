@@ -1,17 +1,37 @@
 import React from "react";
 import Logo from "../../../components/Logo/Logo";
+import { Link, NavLink } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-horizontal text-secondary footer-center p-10">
+    <footer className="footer footer-horizontal bg-[#0B0B0B] text-white footer-center p-10">
       <aside>
-       <Logo></Logo>
-        <p className="font-bold">
-          ACME Industries Ltd.
-          <br />
-          Providing reliable tech since 1992
+        <Logo></Logo>
+        <p className="text-[#dadada] w-1/2">
+          Enjoy fast, reliable parcel delivery with real-time tracking and zero
+          hassle. From personal packages to business shipments — we deliver on
+          time, every time.
         </p>
-        <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+        <div className="border-dashed border-t border-b border-[#dadada71] py-5 w-full">
+          <ul className="flex gap-10 justify-center text-[#dadadabb]">
+              <li className="hover:scale-105 hover:text-white transition-transform">
+                <NavLink to="/service">Service</NavLink>
+              </li>
+              <li className="hover:scale-105 hover:text-white transition-transform">
+                <NavLink to="/coverage">Coverage</NavLink>
+              </li>
+              <li className="hover:scale-105 hover:text-white transition-transform">
+                <NavLink to="/about">About Us</NavLink>
+              </li>
+              <li className="hover:scale-105 hover:text-white transition-transform">
+                <NavLink to="/pricing">Pricing</NavLink>
+              </li>
+              <li className="hover:scale-105 hover:text-white transition-transform">
+                <NavLink to="/rider">Be a Rider</NavLink>
+              </li>
+            
+          </ul>
+        </div>
       </aside>
       <nav>
         <div className="grid grid-flow-col gap-4">
@@ -49,6 +69,7 @@ const Footer = () => {
             </svg>
           </a>
         </div>
+        <p>Copyright © {new Date().getFullYear()} - All right reserved by <span className="text-blue-500 font-bold"><Link to='/'>ZapShift</Link></span></p>
       </nav>
     </footer>
   );
